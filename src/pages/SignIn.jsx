@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const SignIn = () => {
@@ -7,10 +7,10 @@ const SignIn = () => {
     <div 
       className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat px-4 relative"
       style={{ 
-        backgroundImage: `url('/src/images/campus.jpg')`, // public folder එකේ තියෙන image එකේ path එක
+        backgroundImage: `url('/src/images/campus.jpg')`,
       }}
     >
-      {/* Background Blur Overlay - මුළු පසුබිමම Blur කිරීමට */}
+    
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
 
       {/* Main Login Card - Glassmorphism Effect */}
@@ -33,7 +33,7 @@ const SignIn = () => {
           </svg>
         </motion.div>
 
-        <h2 className="text-3xl font-extrabold text-center text-white mb-2 tracking-tight">Sign In</h2>
+       <h2 className="text-3xl font-black text-center text-white mb-2 tracking-tight uppercase">Sign <span className="text-red-500">In</span></h2>
         <p className="text-center text-blue-100 mb-8 font-light">Enter Your Account</p>
         
         <form className="space-y-5">
@@ -76,13 +76,17 @@ const SignIn = () => {
 
           {/* Login Button */}
           <motion.button 
-            whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.95)" }}
+            whileHover={{ scale: 1.02, backgroundColor: "rgba(245, 238, 238, 0.95)" }}
             whileTap={{ scale: 0.98 }}
             className="w-full bg-white text-blue-900 font-bold py-3.5 rounded-xl transition duration-300 shadow-xl mt-4 cursor-pointer"
           >
             Log In
           </motion.button>
+
+          
         </form>
+
+        
 
         {/* Footer Link */}
         <motion.p 
@@ -92,8 +96,10 @@ const SignIn = () => {
           className="mt-8 text-center text-sm text-blue-100"
         >
           New User? 
-          <Link to="/signup" className="text-white font-bold hover:underline ml-1">Register Now</Link>
+          <Link to="/signup" className="text-white font-bold hover:underline ml-1">Register Now </Link><Link to="/home" className="text-white font-bold hover:underline ml-1" style={{color:"red"}}>Back To Home</Link>
         </motion.p>
+
+        
       </motion.div>
     </div>
   );

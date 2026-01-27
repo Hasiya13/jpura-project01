@@ -52,7 +52,7 @@ const SignUp = () => {
               exit={{ opacity: 0, scale: 0.95 }}
             >
               <div className="text-center mb-6">
-                <h2 className="text-3xl font-black text-white tracking-tight">Join Us</h2>
+                <h2 className="text-3xl font-black text-center text-white mb-2 tracking-tight uppercase">Sign <span className="text-red-500">UP</span></h2>
                 <p className="text-blue-200 text-sm font-light">Create your student account in seconds</p>
               </div>
               
