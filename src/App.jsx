@@ -10,6 +10,8 @@ import EditProfile from './pages/EditProfile';
 import AddItem from './pages/AddItem';
 import Community from './pages/Community.JSX';
 import About from './pages/About';
+import UserDetails from './pages/UserDetails';
+
 
 
 function AppContent() {
@@ -25,7 +27,7 @@ function AppContent() {
       
       <Routes>
         
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<UserDetails />} />
         
         {/* Authentication Routes */}
         <Route path="/signin" element={<SignIn />} />
@@ -40,7 +42,7 @@ function AppContent() {
         <Route path="/add-item" element={<AddItem />} />
         <Route path="/community" element={<Community />} />
         <Route path="/about" element={<About />} />
-
+         <Route path="/user/:id" element={<UserDetails />} />
         
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

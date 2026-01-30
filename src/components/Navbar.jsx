@@ -5,6 +5,7 @@ import { Import } from 'lucide-react';
 import Profile from '../pages/Profile';
 
 
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false); 
     const [showProfileMenu, setShowProfileMenu] = useState(false);
@@ -21,7 +22,9 @@ const Navbar = () => {
         ...(isLoggedIn ? [{ name: 'Add Item', path: '/add-item' }] : []),
         { name: 'Inventory', path: '/profile' },
         { name: 'Community', path: '/community' },
-        { name: 'About', path: '/about' }
+        { name: 'About', path: '/about' },
+        
+        
     ];
 
     const notifications = [
